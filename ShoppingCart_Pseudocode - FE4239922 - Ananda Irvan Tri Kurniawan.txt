@@ -1,0 +1,43 @@
+Pembuatan algoritma "Shoping Cart":
+1. Memulai
+2. Mencari item berdasarkan keinginan user pada kolom pencarian
+3. Menampilkan list item sesuai pencarian user
+4. User memilih item yang di inginkan, jika tidak kembali ke langkah 2
+5. User melakukan checkout barang
+6. Konfirmasi list pembelian item user, jika tidak kembali ke langkah 5
+7. User memasukan alamat pengiriman
+8. Menampilkan tagihan yang harus di bayarkan
+9. User memilih metode pembayaran
+10. User melakukan pembayaran
+11. sistem validasi proses pembayaran, jika jika proses pembayaran gagal kembali ke langkah 9
+12. jika berhasil, lakukan pengiriman
+13. Selesai
+
+==============================================================
+Pseudocode
+Program Shopping Cart
+
+START
+READ INPUT nama_item
+For item IN list_item
+	IF item INCLUDE nama_item
+	SHOW item
+
+READ INPUT MemilihItem
+SHOW MenuItem WHERE Item = MemilihItem
+
+WHILE UserBelumSelesai
+	READ INPUT PilihMenu
+	Add PilihMenu to Cart
+
+READ INPUT AlamatUser
+SHOW JumlahTagihan
+TagihanDibayar = FALSE
+
+WHILE TagihanPembayaran NOT TRUE
+	READ INPUT MetodePembayaran
+	READ INPUT Pembayaran
+	IF Pembayaran IS VALID
+		TagihanDibayar = TRUE
+		ProsesPengiriman
+END
